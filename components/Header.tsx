@@ -2,6 +2,7 @@ import Link from "next/link";
 import Nav from "./Nav";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./ModeToggle";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
     return (
@@ -17,13 +18,13 @@ const Header = () => {
                     <Nav />
                     <ModeToggle />
                     <Link href="/contact">
-                        <Button size={"lg"} variant={"destructive"}>Hire me</Button>
+                        <Button size={"lg"} className="rounded-full"><span className="drop-shadow-sm font-bold text-lg">Hire me</span></Button>
                     </Link>
                 </div>
 
                 {/* Mobile Nav */}
                 <div className="xl:hidden">
-                    Mobile Nav
+                    <MobileNav />
                 </div>
             </div>
         </header>
